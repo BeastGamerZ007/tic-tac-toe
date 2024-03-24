@@ -100,22 +100,22 @@ function result()
         res=true;
         r.innerHTML="Congratulations "+namep1+" !<br>You just beat "+namep2+" !";
     }
-    if(document.querySelector("#btn1").innerHTML==="O" && document.querySelector("#btn5").innerHTML==="O" && document.querySelector("#btn9").innerHTML==="O")
+    else if(document.querySelector("#btn1").innerHTML==="O" && document.querySelector("#btn5").innerHTML==="O" && document.querySelector("#btn9").innerHTML==="O")
     {
         res=true;
         r.innerHTML="Congratulations "+namep2+" !<br>You just beat "+namep1+" !";
     }
-    if(document.querySelector("#btn3").innerHTML==="X" && document.querySelector("#btn5").innerHTML==="X" && document.querySelector("#btn7").innerHTML==="X")
+    else if(document.querySelector("#btn3").innerHTML==="X" && document.querySelector("#btn5").innerHTML==="X" && document.querySelector("#btn7").innerHTML==="X")
     {
         res=true;
         r.innerHTML="Congratulations "+namep1+" !<br>You just beat "+namep2+" !";
     }
-    if(document.querySelector("#btn3").innerHTML==="O" && document.querySelector("#btn5").innerHTML==="O" && document.querySelector("#btn7").innerHTML==="O")
+    else if(document.querySelector("#btn3").innerHTML==="O" && document.querySelector("#btn5").innerHTML==="O" && document.querySelector("#btn7").innerHTML==="O")
     {
         res=true;
         r.innerHTML="Congratulations "+namep2+" !<br>You just beat "+namep1+" !";
     }
-    if(document.querySelector("#btn1").innerHTML!="" && document.querySelector("#btn2").innerHTML!="" && document.querySelector("#btn3").innerHTML!="" && document.querySelector("#btn4").innerHTML!="" && document.querySelector("#btn5").innerHTML!="" && document.querySelector("#btn6").innerHTML!="" && document.querySelector("#btn7").innerHTML!="" && document.querySelector("#btn8").innerHTML!="" && document.querySelector("#btn9").innerHTML!="")
+    else if(document.querySelector("#btn1").innerHTML!="" && document.querySelector("#btn2").innerHTML!="" && document.querySelector("#btn3").innerHTML!="" && document.querySelector("#btn4").innerHTML!="" && document.querySelector("#btn5").innerHTML!="" && document.querySelector("#btn6").innerHTML!="" && document.querySelector("#btn7").innerHTML!="" && document.querySelector("#btn8").innerHTML!="" && document.querySelector("#btn9").innerHTML!="")
     {
         res=true;
         r.innerHTML="It's a Draw !";
