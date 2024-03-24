@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p class="heading">Tic-Tac-Toe <br>- by Imaad</p>
+    <div class="ttt">
+        <div class="box1">
+            <div class="names">
+                <div class="name1">
+                    <input class="p1" type="text" placeholder="Enter Player 1">
+                    <button class="enterp1">Enter</button>
+                </div>
+                <div class="name2">
+                    <input class="p2" type="text" placeholder="Enter Player 2">
+                    <button class="enterp2">Enter</button>
+                </div>
+            </div>
+            <div class="result">
+    
+            </div>
+        </div>
+        <div class="box2">
+            <div class="rows">
+                <button class="btn" id="btn1" onclick="
+                    display('btn1');
+                    result();
+                    "></button>
+                <button class="btn" id="btn2" onclick="
+                    display('btn2');
+                    result();
+                    "></button>
+                <button class="btn" id="btn3" onclick="
+                    display('btn3');
+                    result();
+                    "></button>
+            </div>
+            <div class="rows">
+                <button class="btn" id="btn4" onclick="
+                    display('btn4');
+                    result();
+                    "></button>
+                <button class="btn" id="btn5" onclick="
+                    display('btn5');
+                    result();
+                    "></button>
+                <button class="btn" id="btn6" onclick="
+                    display('btn6');
+                    result();
+                    "></button>
+            </div>
+            <div class="rows">
+                <button class="btn" id="btn7" onclick="
+                    display('btn7');
+                    result();
+                    "></button>
+                <button class="btn" id="btn8" onclick="
+                    display('btn8');
+                    result();
+                    "></button>
+                <button class="btn" id="btn9" onclick="
+                    display('btn9');
+                    result();
+                    "></button>
+            </div>
+            <div class="func">
+                <button class="reset" onclick="reset();">Reset</button>
+                <button class="playagain" onclick="playagain();">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
