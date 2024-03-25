@@ -1,4 +1,6 @@
 let flag=0;
+let winp1=0;
+let winp2=0;
 let namep1="";
 let namep2="";
 let r=document.querySelector(".result");
@@ -10,12 +12,13 @@ let p2=document.querySelector(".p2");
 function getname1()
 {
     namep1=p1.value;
-    document.querySelector(".name1").innerHTML="Player 1 : "+namep1;
+    document.querySelector(".name1").innerHTML="Player 1 : "+namep1+" (X)";
 }
 function getname2()
 {
     namep2=p2.value;
-    document.querySelector(".name2").innerHTML="Player 2 : "+namep2;
+    document.querySelector(".name2").innerHTML="Player 2 : "+namep2+" (O)";
+    document.querySelector(".score").innerHTML=namep1+" : "+winp1+"<br>"+namep2+" : "+winp2;
 }
 function display(val)
 {
@@ -73,52 +76,93 @@ function result()
     {
         if(document.querySelector("#btn"+i).innerHTML==="X" && document.querySelector("#btn"+(i+1)).innerHTML==="X" && document.querySelector("#btn"+(i+2)).innerHTML==="X")
         {
-            res=true;
-            r.innerHTML="Congratulations "+namep1+" !<br>You just beat "+namep2+" !";
+            if(res==false)
+            {
+                winp1++;
+                res=true;
+                r.innerHTML="Congratulations "+namep1+" !<br>You just beat "+namep2+" !";
+                document.querySelector(".score").innerHTML=namep1+" : "+winp1+"<br>"+namep2+" : "+winp2;
+            }
         }
         else if(document.querySelector("#btn"+i).innerHTML==="O" && document.querySelector("#btn"+(i+1)).innerHTML==="O" && document.querySelector("#btn"+(i+2)).innerHTML==="O")
         {
-            res=true;
-            r.innerHTML="Congratulations "+namep2+" !<br>You just beat "+namep1+" !";
+            if(res==false)
+            {
+                winp2++;
+                res=true;
+                r.innerHTML="Congratulations "+namep2+" !<br>You just beat "+namep1+" !";
+                document.querySelector(".score").innerHTML=namep1+" : "+winp1+"<br>"+namep2+" : "+winp2;
+            }
         }
     }
     for(let i=1;i<4;i++)
     {
         if(document.querySelector("#btn"+i).innerHTML==="X" && document.querySelector("#btn"+(i+3)).innerHTML==="X" && document.querySelector("#btn"+(i+6)).innerHTML==="X")
         {
-            res=true;
-            r.innerHTML="Congratulations "+namep1+" !<br>You just beat "+namep2+" !";
+            if(res==false)
+            {
+                winp1++;
+                res=true;
+                r.innerHTML="Congratulations "+namep1+" !<br>You just beat "+namep2+" !";
+                document.querySelector(".score").innerHTML=namep1+" : "+winp1+"<br>"+namep2+" : "+winp2;
+            }
         }
         else if(document.querySelector("#btn"+i).innerHTML==="O" && document.querySelector("#btn"+(i+3)).innerHTML==="O" && document.querySelector("#btn"+(i+6)).innerHTML==="O")
         {
-            res=true;
-            r.innerHTML="Congratulations "+namep2+" !<br>You just beat "+namep1+" !";
+            if(res==false)
+            {
+                winp2++;
+                res=true;
+                r.innerHTML="Congratulations "+namep2+" !<br>You just beat "+namep1+" !";
+                document.querySelector(".score").innerHTML=namep1+" : "+winp1+"<br>"+namep2+" : "+winp2;
+            }
         }
     }
     if(document.querySelector("#btn1").innerHTML==="X" && document.querySelector("#btn5").innerHTML==="X" && document.querySelector("#btn9").innerHTML==="X")
     {
-        res=true;
-        r.innerHTML="Congratulations "+namep1+" !<br>You just beat "+namep2+" !";
+        if(res==false)
+        {
+            winp1++;
+            res=true;
+            r.innerHTML="Congratulations "+namep1+" !<br>You just beat "+namep2+" !";
+            document.querySelector(".score").innerHTML=namep1+" : "+winp1+"<br>"+namep2+" : "+winp2;
+        }
     }
     else if(document.querySelector("#btn1").innerHTML==="O" && document.querySelector("#btn5").innerHTML==="O" && document.querySelector("#btn9").innerHTML==="O")
     {
-        res=true;
-        r.innerHTML="Congratulations "+namep2+" !<br>You just beat "+namep1+" !";
+        if(res==false)
+        {
+            winp2++;
+            res=true;
+            r.innerHTML="Congratulations "+namep2+" !<br>You just beat "+namep1+" !";
+            document.querySelector(".score").innerHTML=namep1+" : "+winp1+"<br>"+namep2+" : "+winp2;
     }
+        }
     else if(document.querySelector("#btn3").innerHTML==="X" && document.querySelector("#btn5").innerHTML==="X" && document.querySelector("#btn7").innerHTML==="X")
     {
-        res=true;
-        r.innerHTML="Congratulations "+namep1+" !<br>You just beat "+namep2+" !";
+        if(res==false)
+        {
+            winp1++;
+            res=true;
+            r.innerHTML="Congratulations "+namep1+" !<br>You just beat "+namep2+" !";
+            document.querySelector(".score").innerHTML=namep1+" : "+winp1+"<br>"+namep2+" : "+winp2;
+        }
     }
     else if(document.querySelector("#btn3").innerHTML==="O" && document.querySelector("#btn5").innerHTML==="O" && document.querySelector("#btn7").innerHTML==="O")
     {
-        res=true;
-        r.innerHTML="Congratulations "+namep2+" !<br>You just beat "+namep1+" !";
+        if(res==false)
+        {
+            winp2++;
+            res=true;
+            r.innerHTML="Congratulations "+namep2+" !<br>You just beat "+namep1+" !";
+            document.querySelector(".score").innerHTML=namep1+" : "+winp1+"<br>"+namep2+" : "+winp2;
+        }
     }
     else if(document.querySelector("#btn1").innerHTML!="" && document.querySelector("#btn2").innerHTML!="" && document.querySelector("#btn3").innerHTML!="" && document.querySelector("#btn4").innerHTML!="" && document.querySelector("#btn5").innerHTML!="" && document.querySelector("#btn6").innerHTML!="" && document.querySelector("#btn7").innerHTML!="" && document.querySelector("#btn8").innerHTML!="" && document.querySelector("#btn9").innerHTML!="" && res==false)
     {
         res=true;
         r.innerHTML="It's a Draw !";
+        document.querySelector(".score").innerHTML=namep1+" : "+winp1+"<br>"+namep2+" : "+winp2;
     }
 }
 
